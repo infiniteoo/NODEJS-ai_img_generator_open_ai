@@ -1,7 +1,7 @@
 const { Configuration, OpenAIApi } = require("openai");
 
 const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: process.env.OPEN_API_KEY,
 });
 const openai = new OpenAIApi(configuration);
 
@@ -13,7 +13,7 @@ const generateImage = async (req, res) => {
 
   try {
     const response = await openai.createImage({
-      prompt,
+      prompt: "live streaming digital future art",
       n: 1,
       size: imageSize,
     });
